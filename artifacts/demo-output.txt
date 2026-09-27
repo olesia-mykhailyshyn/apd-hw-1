@@ -1,0 +1,42 @@
+
+=== Task 1: validation ===
+  OK     valid item
+  ERROR  blank title -> blankTitle
+  ERROR  zero minutes -> nonPositiveEstimatedMinutes
+  ERROR  blank title and zero minutes -> blankTitle
+
+=== Task 3: duplicates and sorting ===
+  [ ] j1: Build milestone, 90 min, project
+  [ ] p1: Practice drills, 30 min, practice
+  [ ] r0: Read chapter, 20 min, reading
+  [ ] r1: Read chapter, 45 min, reading
+  ERROR  plan with duplicate id -> duplicateID("a")
+
+=== Task 4: queries and completion ===
+  reading: ["r0", "r1"], incomplete minutes: 185
+  OK     complete r1
+  OK     complete r1 again
+  ERROR  complete unknown id -> unknownID("banana")
+  incomplete minutes: 140
+  [ ] j1: Build milestone, 90 min, project
+  [ ] p1: Practice drills, 30 min, practice
+  [ ] r0: Read chapter, 20 min, reading
+  [x] r1: Read chapter, 45 min, reading
+
+=== Task 2: decoding JSON ===
+  [ ] a: First, 10 min, reading
+  [ ] b: Second, 20 min, practice
+  [ ] k: Keyed, 15 min, project
+  ERROR  decode blank title -> blankTitle
+  ERROR  decode unknown category -> DecodingError.dataCorrupted: Data was corrupted. Path: category. Debug description: Cannot initialize StudyCategory from invalid String value banana
+
+=== Bonus: importMerging ===
+  OK     replace j1, add zz and aa
+  [ ] j1: Build milestone v2, 120 min, project
+  [ ] p1: Practice drills, 30 min, practice
+  [ ] r0: Read chapter, 20 min, reading
+  [x] r1: Read chapter, 45 min, reading
+  [ ] aa: Read article, 15 min, reading
+  [ ] zz: Watch talk, 25 min, reading
+  ERROR  import with duplicate incoming id -> duplicateID("dup")
+  plan unchanged after failed import: true

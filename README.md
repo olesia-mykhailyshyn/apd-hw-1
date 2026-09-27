@@ -31,3 +31,54 @@ Keep the repository public and the submitted commit reachable through the gradin
 This assignment uses no GitHub Actions workflow. Staff will clone your submitted public repository at the submitted SHA and run private hidden tests locally against a temporary copy.
 
 See the course handout for the complete requirements, scoring, and optional bonus.
+
+## My submission
+
+Status: tasks 1 to 5 and the optional bonus (`importMerging`) are done. `swift test` runs 29 tests (3 public and 26 of mine) with 0 failures.
+
+Run the tests from the project root:
+
+```sh
+swift test
+```
+
+Run the demo program, which calls every feature and prints the results:
+
+```sh
+cd Demo
+swift run
+```
+
+Where things are:
+
+- Code: `Sources/StudyPlanner/StudyPlanner.swift`
+- My tests: `Tests/StudyPlannerTests/StudyPlannerStudentTests.swift`
+- Plan: [PLAN.md](PLAN.md)
+- AI usage log: [AGENT_WORKLOG.md](AGENT_WORKLOG.md)
+- Evidence in `artifacts/`: test log ([swift-test.log](artifacts/swift-test.log)), demo output ([demo-output.txt](artifacts/demo-output.txt)), learning log ([ai-learning-log.md](artifacts/ai-learning-log.md))
+- Demo program: `Demo/` (a separate package, so the graded `Package.swift` is not changed)
+
+Not changed: the public API, the supplied public tests, the fixture file and `Package.swift`.
+
+
+
+## My submission
+
+Status: tasks 1 to 5 and the optional bonus (`importMerging`) are done. `swift test` runs 29 tests (3 public and 26 of mine) with 0 failures.
+
+Run the tests from the project root:
+    swift test
+
+Run the demo program, which calls every feature and prints the results:
+    cd Demo
+    swift run
+
+Where things are:
+- Code: Sources/StudyPlanner/StudyPlanner.swift
+- My tests: Tests/StudyPlannerTests/StudyPlannerStudentTests.swift
+- Plan: PLAN.md
+- AI usage log: AGENT_WORKLOG.md
+- Evidence in artifacts/: test log, demo output, learning log
+- Demo program: Demo/ (a separate package, so the graded Package.swift is not changed)
+
+Not changed: the public API, the supplied public tests, the fixture file and Package.swift.
