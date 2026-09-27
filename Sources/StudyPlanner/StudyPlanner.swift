@@ -25,7 +25,20 @@ public struct StudyItem: Codable, Equatable {
         category: StudyCategory,
         isCompleted: Bool = false
     ) throws {
-        fatalError("Implement StudyItem validation")
+        let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedTitle.isEmpty {
+            throw StudyPlanError.blankTitle
+        }
+
+        if estimatedMinutes <= 0 {
+            throw StudyPlanError.nonPositiveEstimatedMinutes
+        }
+
+        self.id = id
+        self.title = title
+        self.estimatedMinutes = estimatedMinutes
+        self.category = category
+        self.isCompleted = isCompleted
     }
 }
 
